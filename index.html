@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="styles_hw9.css" media="all">
+  
+</head>
+<body>
+
+    <h1 class="header-text">Covid 19 cases all over the World</h1>
+    <p class="color-text">Visualization created by: Srihitha Mallepaddi</p>
+
+  
+  
+<div id="hw_9"></div>
+
+
+<script type="text/javascript">
+
+  // embed the first chart
+  var spec1 = "hw9.vg.json";
+  vegaEmbed('#hw_9', spec1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+
+</body>
+</html>
