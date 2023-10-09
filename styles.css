@@ -1,0 +1,23 @@
+.header-text {
+	font-size: 40px;
+	text-align: center;
+	font-family: sans-serif;
+	font-weight: bold; 
+    text-decoration: underline; 
+    color: green;
+}
+
+.color-text {
+	font-size: 24px;
+    color: crimson;
+    margin-bottom: 40px;
+}
+
+#hw_9 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 800px;
+    width: 800px;
+  }
