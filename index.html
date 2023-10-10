@@ -6,32 +6,75 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
   
-  
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="styles.css" media="all">
+
   
 </head>
 <body>
 
-  <h1 class="header-text">Covid 19 cases all over the World</h1>
-  <p class="info"> COVID-19 has had a profound impact on the world over the past few years, resulting in significant suffering and a large number of fatalities.
-    The following interactive visualization illustrates the global distribution of COVID-19 cases. </p>
-  <p class="color-text">Visualization created by: Srihitha Mallepaddi</p>
+  <div>
+    <h1 class="header-text">Welcome to My COVID-19 Dashboard</h1>
+    <p class="large-text">This dashboard provides information about COVID-19 cases around the world.</p>
+    <p class="color-text">Visualization created by: Srihitha Mallepaddi</p>
+  </div>
 
-  <div id="hw_9"></div>
+  <div class="chart-container">
+    <div id="hw9">
+      <!-- Chart content goes here -->
+    </div>
+    <div class="text">
+      <p>This first visualization displays a map featuring countries within continents that have the total number of active Covid cases.</p>
+    </div>
+  </div>
 
-  
+  <div class="chart-container">
+    <div id="hw10">
+      <!-- Chart content goes here -->
+    </div>
+    <div class="text">
+      <p>Discover the interactive Scatter plot, providing in-depth COVID-19 insights. As we hover over data points, detailed information about active cases, 
+        total deaths, total cases, and recoveries is revealed. The legend on the right uses colors to identify continents, making it easy to spot countries. 
+        Additionally, point size indicates population count. To enhance the exploration, I've included a filter at the end of the visualization, allowing to focus 
+        on specific continents. 
+      </p>
+    </div>
+  </div>
 
+  <div class="chart-container">
+    <div id="hw10_chart2">
+      <!-- Chart content goes here -->
+    </div>
+    <div class="text">
+      <p> This visualization displays the average total COVID-19 cases by continent.</p>
+      </p>
+    </div>
+  </div>
 
-<script type="text/javascript">
+  <div id="hw9"></div>
+  <div id="hw10"></div>
+  <div id="hw10_chart2"></div>
 
-  // embed the first chart
-  var spec1 = "hw9.vg.json";
-  vegaEmbed('#hw_9', spec1).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
+  <script type="text/javascript">
 
+    // embed the first chart
+    var spec1 = "hw9.vg.json";
+    vegaEmbed('#hw9', spec1).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    // Embed the second chart
+    var spec2 = "hw10.vg.json";
+    vegaEmbed('#hw10', spec2).then(function(result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+
+    // Embed the third chart
+    var spec3 = "hw10_chart2.vg.json";
+    vegaEmbed('#hw10_chart2', spec3).then(function(result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+  </script>
 
 </body>
 </html>
