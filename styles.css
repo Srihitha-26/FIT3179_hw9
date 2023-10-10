@@ -1,29 +1,81 @@
+#hw10 {
+	position: relative;
+	/* top:100px; */
+	bottom: 35%; 
+	left: 3%; 
+	/* right: 100px; */
+	/*height: 500px;
+	width: 800px;*/
+    /* margin-bottom: 100px; */
+	/* padding-right: 15%;
+	padding-bottom: 8%; */
+	margin-bottom: 40px;
+	padding-right: 6%;
+}
+
+#hw10_chart2 {
+	position: relative;
+	/* top:100px; */
+	bottom: 35%; 
+	left: 3%;
+	/* right: 100px; */
+	/*height: 600px;
+	width: 600px;*/
+}
+
+#hw9 {
+	position: relative;
+	/* top: 25%; */
+	bottom: 35%; 
+	left: 3%;
+	/* right: 100px; */
+	/*height: 600px;
+	width: 600px;*/	
+    margin-bottom: 40px;
+	padding-right: 6%;
+}
+
+
+.large-text {
+    font-size: 24px;
+	text-align: center;
+	text-decoration: double;
+}
+
+.color-text {
+	font-size: 24px;
+	color: chocolate;
+	text-align: center;
+	padding-bottom: 3.5%;
+}
+
 .header-text {
 	font-size: 40px;
 	text-align: center;
 	font-family: sans-serif;
 	font-weight: bold; 
     text-decoration: underline; 
-    color: green;
 }
 
-.color-text {
-	font-size: 24px;
-    color: crimson;
-    margin-bottom: 40px;
-    text-align: center;
-}
 
-#hw_9 {
-    position: absolute;
-    top: 35%;
-    left: 25%;
-    height: 1000px;
-    width: 1000px;
+.chart-container {
+	display: flex; /* Display children in a row */
+	justify-content: space-between; /* Space between children */
+	align-items: center; /* Vertically center children */
+  }
+  
+  
+.text {
+	width: 50%;
+	padding-left: 2%; 
+	/* padding-right: 20%; */
+	font-size: large;
+	font-family: sans-serif;
   }
 
-.info {
-    font-size: 24px;
-    text-align: center;
-    font-family: sans-serif;
-}
+  body {
+	background-color: #f0f0f0; /* Replace with the color of your choice */
+  }
+  
+
+  
