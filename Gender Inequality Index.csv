@@ -1,0 +1,90 @@
+ISO3,Country,Continent,Hemisphere,Human Development Groups,UNDP Developing Regions,HDI Rank (2021),GII Rank (2021),Gender Inequality Index (2018),Gender Inequality Index (2019),Gender Inequality Index (2020),Gender Inequality Index (2021)
+AGO,Angola,Africa,Southern Hemisphere,Medium,SSA,148,136,0.537,0.537,0.537,0.537
+ARE,United Arab Emirates,Asia,Northern Hemisphere,Very High,AS,26,11,0.103,0.056,0.05,0.049
+ARG,Argentina,America,Southern Hemisphere,Very High,LAC,47,69,0.315,0.306,0.293,0.287
+ARM,Armenia,Asia,Northern Hemisphere,High,ECA,85,53,0.26,0.239,0.239,0.216
+AZE,Azerbaijan,Asia,Northern Hemisphere,High,ECA,91,70,0.307,0.314,0.301,0.294
+BEN,Benin,Africa,Northern Hemisphere,Low,SSA,166,152,0.613,0.61,0.609,0.602
+BGD,Bangladesh,Asia,Northern Hemisphere,Medium,SA,129,131,0.533,0.531,0.531,0.53
+BHS,Bahamas,America,Northern Hemisphere,Very High,LAC,55,78,0.325,0.324,0.325,0.329
+BLZ,Belize,America,Northern Hemisphere,Medium,LAC,123,86,0.415,0.406,0.387,0.364
+BRA,Brazil,America,Southern Hemisphere,High,LAC,87,94,0.401,0.395,0.395,0.39
+BRB,Barbados,America,Northern Hemisphere,High,LAC,70,64,0.272,0.266,0.268,0.268
+BWA,Botswana,Africa,Southern Hemisphere,Medium,SSA,117,117,0.474,0.47,0.469,0.468
+CAF,Central African Republic,Africa,Northern Hemisphere,Low,SSA,188,166,0.69,0.69,0.69,0.672
+CHL,Chile,America,Southern Hemisphere,Very High,LAC,42,47,0.207,0.206,0.21,0.187
+CIV,Ivory Coast,Africa,Northern Hemisphere,Medium,SSA,159,155,0.632,0.621,0.619,0.613
+CMR,Cameroon,Africa,Northern Hemisphere,Medium,SSA,151,148,0.572,0.57,0.566,0.565
+COL,Colombia,America,Northern Hemisphere,High,LAC,88,102,0.427,0.423,0.425,0.424
+CRI,Costa Rica,America,Northern Hemisphere,Very High,LAC,58,60,0.285,0.269,0.259,0.256
+CUB,Cuba,America,Northern Hemisphere,High,LAC,83,73,0.309,0.307,0.307,0.303
+DOM,Dominican Republic,America,Northern Hemisphere,High,LAC,80,106,0.451,0.443,0.434,0.429
+DZA,Algeria,Africa,Northern Hemisphere,High,AS,91,126,0.439,0.437,0.44,0.499
+ECU,Ecuador,America,Southern Hemisphere,High,LAC,95,85,0.375,0.37,0.366,0.362
+EGY,Egypt,Africa,Northern Hemisphere,High,AS,97,109,0.456,0.468,0.445,0.443
+FJI,Fiji,Oceania,Southern Hemisphere,High,EAP,99,77,0.325,0.324,0.324,0.318
+GAB,Gabon,Africa,Southern Hemisphere,High,SSA,112,140,0.549,0.545,0.55,0.541
+GHA,Ghana,Africa,Northern Hemisphere,Medium,SSA,133,130,0.539,0.536,0.535,0.529
+GIN,Guinea,Africa,Northern Hemisphere,Low,SSA,182,157,0.611,0.607,0.622,0.621
+GMB,Gambia,Africa,Northern Hemisphere,Low,SSA,174,153,0.607,0.605,0.612,0.611
+GTM,Guatemala,America,Northern Hemisphere,Medium,LAC,135,121,0.517,0.488,0.485,0.481
+IDN,Indonesia,Asia,Southern Hemisphere,High,EAP,114,110,0.453,0.457,0.447,0.444
+IND,India,Asia,Northern Hemisphere,Medium,SA,132,122,0.505,0.486,0.493,0.49
+IRN,Iran,Asia,Northern Hemisphere,High,SA,76,115,0.452,0.447,0.465,0.459
+IRQ,Iraq,Asia,Northern Hemisphere,Medium,AS,121,145,0.569,0.567,0.564,0.558
+JAM,Jamaica,America,Northern Hemisphere,High,LAC,110,80,0.366,0.363,0.336,0.335
+JOR,Jordan,Asia,Northern Hemisphere,High,AS,102,118,0.449,0.457,0.475,0.471
+KAZ,Kazakhstan,Asia,Northern Hemisphere,Very High,ECA,56,41,0.173,0.168,0.164,0.161
+KEN,Kenya,Africa,Northern Hemisphere,Medium,SSA,152,128,0.514,0.511,0.507,0.506
+KGZ,Kyrgyzstan,Asia,Northern Hemisphere,Medium,ECA,118,87,0.381,0.381,0.386,0.37
+KHM,Cambodia,Asia,Northern Hemisphere,Medium,EAP,146,116,0.466,0.464,0.466,0.461
+KWT,Kuwait,Asia,Northern Hemisphere,Very High,AS,50,74,0.253,0.225,0.204,0.305
+LCA,Saint Lucia,America,Northern Hemisphere,High,LAC,106,91,0.394,0.392,0.391,0.381
+LKA,Sri Lanka,Asia,Northern Hemisphere,High,SA,73,92,0.378,0.385,0.384,0.383
+LSO,Lesotho,Africa,Southern Hemisphere,Low,SSA,168,144,0.559,0.557,0.557,0.557
+MAR,Morocco,Africa,Northern Hemisphere,Medium,AS,123,104,0.435,0.432,0.433,0.425
+MDA,Moldova,Europe,Northern Hemisphere,High,ECA,80,51,0.241,0.229,0.228,0.205
+MDV,Maldives,Asia,Northern Hemisphere,High,SA,90,83,0.341,0.353,0.351,0.348
+MEX,Mexico,America,Northern Hemisphere,High,LAC,86,75,0.323,0.317,0.317,0.309
+MKD,North Macedonia,Europe,Northern Hemisphere,High,ECA,78,37,0.141,0.134,0.137,0.134
+MLI,Mali,Africa,Northern Hemisphere,Low,SSA,186,155,0.675,0.667,0.613,0.613
+MNG,Mongolia,Asia,Northern Hemisphere,High,EAP,96,76,0.329,0.323,0.315,0.313
+MOZ,Mozambique,Africa,Southern Hemisphere,Low,SSA,185,136,0.543,0.54,0.538,0.537
+MRT,Mauritania,Africa,Northern Hemisphere,Medium,SSA,158,161,0.634,0.632,0.632,0.632
+MUS,Mauritius,Africa,Southern Hemisphere,Very High,SSA,63,82,0.38,0.344,0.348,0.347
+MWI,Malawi,Africa,Southern Hemisphere,Low,SSA,169,142,0.574,0.555,0.555,0.554
+MYS,Malaysia,Asia,Northern Hemisphere,Very High,EAP,62,57,0.225,0.225,0.223,0.228
+NAM,Namibia,Africa,Southern Hemisphere,Medium,SSA,139,111,0.442,0.445,0.445,0.445
+NER,Niger,Africa,Northern Hemisphere,Low,SSA,189,153,0.635,0.632,0.631,0.611
+NIC,Nicaragua,America,Northern Hemisphere,Medium,LAC,126,102,0.431,0.432,0.429,0.424
+NPL,Nepal,Asia,Northern Hemisphere,Medium,SA,143,113,0.457,0.454,0.454,0.452
+PAK,Pakistan,Asia,Northern Hemisphere,Low,SA,161,135,0.542,0.534,0.535,0.534
+PAN,Panama,America,Northern Hemisphere,Very High,LAC,61,96,0.412,0.398,0.395,0.392
+PER,Peru,America,Southern Hemisphere,High,LAC,84,90,0.403,0.397,0.409,0.38
+PHL,Philippines,Asia,Northern Hemisphere,Medium,EAP,116,101,0.422,0.421,0.421,0.419
+PNG,Papua New Guinea,Oceania,Southern Hemisphere,Medium,EAP,156,169,0.728,0.726,0.725,0.725
+PRY,Paraguay,America,Southern Hemisphere,High,LAC,105,111,0.452,0.448,0.446,0.445
+RWA,Rwanda,Africa,Southern Hemisphere,Low,SSA,165,93,0.389,0.388,0.388,0.388
+SDN,Sudan,Africa,Northern Hemisphere,Low,AS,172,141,0.557,0.555,0.555,0.553
+SEN,Senegal,Africa,Northern Hemisphere,Low,SSA,170,131,0.532,0.532,0.532,0.53
+SGP,Singapore,Asia,Northern Hemisphere,Very High,EAP,12,7,0.049,0.051,0.04,0.04
+SLV,El Salvador,America,Northern Hemisphere,Medium,LAC,125,88,0.37,0.37,0.365,0.376
+STP,Sao Tome and Principe,Africa,Northern Hemisphere,Medium,SSA,138,124,0.524,0.522,0.496,0.494
+SWZ,Eswatini,Africa,Southern Hemisphere,Medium,SSA,144,138,0.563,0.561,0.541,0.54
+SYR,Syrian Arab Republic,Asia,Northern Hemisphere,Medium,AS,150,119,0.465,0.465,0.478,0.477
+TGO,Togo,Africa,Northern Hemisphere,Low,SSA,162,149,0.586,0.588,0.58,0.58
+THA,Thailand,Asia,Northern Hemisphere,Very High,EAP,66,79,0.405,0.335,0.335,0.333
+TJK,Tajikistan,Asia,Northern Hemisphere,Medium,ECA,122,68,0.289,0.298,0.287,0.285
+TON,Tonga,Oceania,Southern Hemisphere,High,EAP,91,160,0.365,0.367,0.366,0.631
+TTO,Trinidad and Tobago,America,Northern Hemisphere,Very High,LAC,57,81,0.348,0.344,0.345,0.344
+TUN,Tunisia,Africa,Northern Hemisphere,High,AS,97,61,0.253,0.27,0.264,0.259
+TUR,Turkey,Asia,Northern Hemisphere,Very High,ECA,48,65,0.286,0.277,0.277,0.272
+TZA,Tanzania,Africa,Southern Hemisphere,Low,SSA,160,146,0.562,0.561,0.56,0.56
+UGA,Uganda,Africa,Northern Hemisphere,Low,SSA,166,131,0.533,0.53,0.53,0.53
+UKR,Ukraine,Europe,Northern Hemisphere,High,ECA,77,49,0.249,0.205,0.198,0.2
+URY,Uruguay,America,Southern Hemisphere,Very High,LAC,58,58,0.258,0.253,0.242,0.235
+VEN,Venezuela,America,Northern Hemisphere,Medium,LAC,120,123,0.483,0.492,0.492,0.492
+VNM,Viet Nam,Asia,Northern Hemisphere,High,EAP,115,71,0.304,0.305,0.305,0.296
+ZAF,South Africa,Africa,Southern Hemisphere,High,SSA,109,97,0.405,0.41,0.408,0.405
+ZMB,Zambia,Africa,Southern Hemisphere,Medium,SSA,154,138,0.537,0.534,0.535,0.54
+ZWE,Zimbabwe,Africa,Southern Hemisphere,Medium,SSA,146,134,0.535,0.533,0.533,0.532
