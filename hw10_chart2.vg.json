@@ -1,40 +1,67 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 1050,
-    "height": 300,
-    "title": "Mean cases over the World!",
-    "data": {"url": "https://raw.githubusercontent.com/Srihitha-26/FIT3179_hw9/main/worldometer_data.csv"},
-    "layer": [
-      {
-        "mark": "bar",
-        "encoding": {
-          "x": { "field": "Continent", "type": "nominal"},
-          "y": { "aggregate": "mean", "field": "TotalCases", "type": "quantitative"},
-          "tooltip": [
-            {"field": "Continent", "type": "nominal"},
-            {"field": "TotalCases", "type": "quantitative"}
-          ]
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 600,
+  "width": 700,
+  "title": "Total number of Recovered across Continents",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Srihitha-26/FIT3179_hw9/main/worldometer_data.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "opacity": {
+      "condition": {
+        "test": "test(regexp(search_input,'i'),datum.Continent)",
+        "value": 0.8
       },
-      {
-        "mark": "rule",
-        "encoding": {
-          "y": {
-            "aggregate": "mean",
-            "field": "TotalCases",
-            "type": "quantitative",
-            "scale": {"type": "log"} 
-          },
-          "color": {"value": "red"},
-          "size": {"value": 5},
-          "tooltip": [
-            {"field": "TotalCases", "type": "quantitative", "aggregate": "mean"}
-          ]
-        }
+      "value": 0.1
+    },
+    "x": {
+      "aggregate": "sum",
+      "field": "TotalRecovered",
+      "type": "quantitative",
+      "title": "Total Cases"
+    },
+    "y": {
+      "field": "Continent",
+      "type": "nominal",
+      "title": "Continent"
+    },
+    "color": {
+      "field": "Continent",
+      "type": "nominal",
+      "legend": {
+        "title": "Continent"
       }
-    ],
-    "config": {
-      "axisY": {"format": ".3s"} 
+    },
+    "tooltip": [
+      {"field": "Continent", "title": "Continent" },
+      {"field": "TotalRecovered", "title": "Total Cases", "format": ".0f", "aggregate":"sum"}
+    ]
+  },
+  "params": [
+    {
+      "name": "search_input",
+      "bind": {
+        "input": "Search",
+        "placeholder": "Continent Name",
+        "name": "Search"
+      },
+      "value": ""
+    }
+  ],
+  "layer": [
+    {"mark": "bar"}, 
+    {
+    "mark": {
+      "type": "text",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 3
+    },
+    "encoding": {
+      "text": {"field": "TotalRecovered", "type": "quantitative", "aggregate":"sum"},
+      "color":{"value": "black"}
     }
   }
-  
+]
+}
