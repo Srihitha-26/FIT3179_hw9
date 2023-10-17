@@ -11,9 +11,9 @@
     "opacity": {
       "condition": {
         "test": "test(regexp(search_input,'i'),datum.Continent)",
-        "value": 0.8
+        "value": 0.9
       },
-      "value": 0.1
+      "value": 0.3
     },
     "x": {
       "aggregate": "sum",
