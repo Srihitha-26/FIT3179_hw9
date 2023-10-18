@@ -1,0 +1,148 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 700,
+    "height": 500,
+    "title": "COVID-19 Cases per Country",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Srihitha-26/FIT3179_hw9/main/worldometer_data.csv"
+    },
+    "params": [
+      {
+        "name": "Population_Above",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": 0,
+          "max": 100000000,
+          "step": 1000000,
+          "name": "Minimum Population: "
+        }
+      },
+      {
+        "name": "Continent_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "North America",
+            "South America",
+            "Europe",
+            "Africa",
+            "Asia",
+            "Australia/Oceania"
+          ],
+          "labels": [
+            "Show All",
+            "North America",
+            "South America",
+            "Europe",
+            "Africa",
+            "Asia",
+            "Australia/Oceania"
+          ],
+          "name": "Continent Selection: "
+        }
+      }
+    ],
+    "transform": [
+      {"filter": "datum.ActiveCases > 0"},
+      {"filter": "datum.TotalDeaths > 0"},
+      {"filter": "datum.Population > Population_Above"},
+      {
+        "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "TotalCases",
+        "type": "quantitative",
+        "title": "Total number of Cases",
+        "axis": {"tickCount": 7},
+        "scale": {"type": "log", "domain": [1, 10000000]}
+      },
+      "y": {
+        "field": "TotalDeaths",
+        "type": "quantitative",
+        "title": "Total number of Deaths",
+        "axis": {"tickCount": 6},
+        "scale": {"type": "log", "domain": [1, 1000000]}
+      }
+    },
+    "layer": [
+      {
+        "mark": "circle",
+        "encoding": {
+          "size": {
+            "field": "Population",
+            "type": "quantitative",
+            "scale": {
+              "type": "threshold",
+              "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+              "range": [10, 50, 150, 200, 300, 400]
+            },
+            "legend": {"format": ".1s"}
+          },
+          "color": {
+            "field": "Continent",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+                "North America",
+                "South America",
+                "Europe",
+                "Africa",
+                "Asia",
+                "Australia/Oceania"
+              ],
+              "range": [
+                "#e41a1c",
+                "#984ea3",
+                "#ff7f00",
+                "#a65628",
+                "#377eb8",
+                "#a6cee3"
+              ]
+            }
+          },
+          "opacity": {"value": 0.6},
+          "tooltip": [
+            {"field": "Country/Region", "type": "nominal"},
+            {"field": "TotalCases", "type": "quantitative", "format": ","},
+            {"field": "ActiveCases", "type": "quantitative", "format": ","},
+            {"field": "TotalDeaths", "type": "quantitative", "format": ","},
+            {"field": "TotalRecovered", "type": "quantitative", "format": ","},
+            {"field": "Population", "type": "quantitative", "format": ","}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "middle",
+          "dx": -12,
+          "fontSize": 11.5,
+          "fontStyle": "italic"
+        },
+        "encoding": {
+          "text": {"field": "Country/Region", "type": "nominal"},
+          "color": {"value": "black"},
+          "opacity": {
+            "condition": {
+              "test": "datum['Country/Region'] == 'China' || datum['Country/Region'] == 'Singapore' || datum['Country/Region'] == 'Australia' || datum['Country/Region'] == 'New Zealand' || datum['Country/Region'] == 'Italy' || datum['Country/Region'] == 'Yemen' ||  datum['Country/Region'] == 'USA' || datum['Country/Region'] == 'Zambia' || datum['Country/Region'] == 'Egypt' || datum['Country/Region'] == 'India' || datum['Country/Region'] == 'Brazil' ",
+              "value": 1
+            },
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Country/Region", "type": "nominal"},
+            {"field": "TotalCases", "type": "quantitative", "format": ","},
+            {"field": "ActiveCases", "type": "quantitative", "format": ","},
+            {"field": "TotalDeaths", "type": "quantitative", "format": ","},
+            {"field": "TotalRecovered", "type": "quantitative", "format": ","},
+            {"field": "Population", "type": "quantitative", "format": ","}
+          ]
+        }
+      }
+    ]
+  }
