@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "height": 600,
-  "width": 700,
-  "title": "Total number of Recovered across Continents",
+  "height": 500,
+  "width": 500,
+  "title": "Total number of Death across Continents",
   "data": {
     "url": "https://raw.githubusercontent.com/Srihitha-26/FIT3179_hw9/main/worldometer_data.csv"
   },
@@ -17,9 +17,9 @@
     },
     "x": {
       "aggregate": "sum",
-      "field": "TotalRecovered",
+      "field": "TotalDeaths",
       "type": "quantitative",
-      "title": "Total Cases"
+      "title": "Total Death Cases"
     },
     "y": {
       "field": "Continent",
@@ -34,8 +34,8 @@
       }
     },
     "tooltip": [
-      {"field": "Continent", "title": "Continent" },
-      {"field": "TotalRecovered", "title": "Total Cases", "format": ".0f", "aggregate":"sum"}
+      {"field": "Continent", "title": "Continent: " },
+      {"field": "TotalDeaths", "title": "Total number of Deaths: ", "format": ".0f", "aggregate":"sum"}
     ]
   },
   "params": [
@@ -44,7 +44,7 @@
       "bind": {
         "input": "Search",
         "placeholder": "Continent Name",
-        "name": "Search"
+        "name": "Search: "
       },
       "value": ""
     }
@@ -59,7 +59,7 @@
       "dx": 3
     },
     "encoding": {
-      "text": {"field": "TotalRecovered", "type": "quantitative", "aggregate":"sum"},
+      "text": {"field": "TotalDeaths", "type": "quantitative", "aggregate":"sum"},
       "color":{"value": "black"}
     }
   }
