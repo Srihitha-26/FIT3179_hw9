@@ -1,0 +1,181 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 700,
+  "height": 600,
+  "title": "Gini Index with different Cases Count",
+  "projection": {
+      "type": "equalEarth"
+  },
+  "params": [
+      {
+          "name": "CaseType",
+          "value": "TotalCases",
+          "bind": {
+              "input": "select",
+              "options": [
+                  "TotalCases",
+                  "TotalDeaths",
+                  "ActiveCases",
+                  "TotalRecovered"
+              ],
+              "name": "Select a Case Type: "
+          } 
+      }
+  ],
+  "layer": [
+      {
+          "data": {
+              "url": "https://raw.githubusercontent.com/Srihitha-26/FIT3179/main/ne_110m_admin_0_countries.json",
+              "format": {
+                  "type": "topojson",
+                  "feature": "ne_110m_admin_0_countries"
+              }
+          },
+          "transform": [
+              {
+                  "calculate": "'Data not available for ' + datum.properties.NAME",
+                  "as": "note"
+              }
+          ],
+          "mark": {
+              "type": "geoshape",
+              "fill": "#ddd",
+              "stroke": "white",
+              "strokeWidth": 1
+          },
+          "encoding": {
+              "tooltip": {
+                  "field": "note"
+              }
+          }
+      },
+      {
+          "data": {
+              "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+              "format": {
+                  "type": "topojson",
+                  "feature": "oceans"
+              }
+          },
+          "mark": {
+              "type": "geoshape",
+              "fill": "skyblue"
+          }
+      },
+      {
+          "data": {
+              "url": "https://raw.githubusercontent.com/Srihitha-26/FIT3179/main/ne_110m_graticules_30.json",
+              "format": {
+                  "type": "topojson",
+                  "feature": "ne_110m_graticules_30"
+              }
+          },
+          "transform": [
+              {
+                  "calculate": "'Graticule'",
+                  "as": "note"
+              }
+          ],
+          "mark": {
+              "type": "geoshape",
+              "stroke": "grey",
+              "strokeWidth": 1,
+              "fill": null
+          },
+          "encoding": {
+              "tooltip": {
+                  "field": "note"
+              }
+          }
+      },
+      {
+          "data": {
+              "url": "https://raw.githubusercontent.com/Srihitha-26/FIT3179_hw9/main/worldometer_data.csv",
+              "format": {
+                  "type": "csv"
+              }
+          },
+          "transform": [
+              {
+                  "lookup": "Country/Region",
+                  "from": {
+                      "data": {
+                          "url": "https://raw.githubusercontent.com/Srihitha-26/FIT3179/main/ne_110m_admin_0_countries.json",
+                          "format": {
+                              "type": "topojson",
+                              "feature": "ne_110m_admin_0_countries"
+                          }
+                      },
+                      "key": "properties.NAME"
+                  },
+                  "as": "geo"
+              },
+              {
+                "calculate": "datum[CaseType] ? parseFloat(datum[CaseType]) : null",
+                "as": "Population"
+            }
+          ],
+          "mark": {
+              "type": "geoshape",
+              "stroke": "#fff",
+              "strokeWidth": 0.5
+          },
+          "encoding": {
+              "shape": {
+                  "field": "geo",
+                  "type": "geojson"
+              },
+              "color": {
+                  "field": "Population",
+                  "type": "quantitative",
+                  "scale": {"scheme": "yelloworangered"}
+              },
+              "tooltip": [
+                  {
+                      "field": "Country/Region",
+                      "type": "nominal",
+                      "title": "Country: "
+                  },
+                  {
+                      "field": "2022_gini",
+                      "type": "quantitative",
+                      "title": "Gini Index: ",
+                      "format": ".1f"
+                  },
+                  {
+                    "field": "TotalCases",
+                    "type": "quantitative",
+                    "title": "Total Cases: ",
+                    "format": ","
+                },
+                {
+                    "field": "TotalDeaths",
+                    "type": "quantitative",
+                    "title": "Total Deaths: ",
+                    "format": ","
+                },
+                {
+                    "field": "ActiveCases",
+                    "type": "quantitative",
+                    "title": "Active Cases: ",
+                    "format": ","
+                },
+                {
+                    "field": "TotalRecovered",
+                    "type": "quantitative",
+                    "title": "Recovered Cases: ",
+                    "format": ","
+                }
+              ]
+          }
+      }
+  ],
+  "config": {
+      "view": {
+          "stroke": "transparent"
+      },
+      "axis": {
+          "domainWidth": 1
+      }
+  }
+}
