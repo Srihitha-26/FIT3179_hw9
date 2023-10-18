@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 500,
+  "width": 500,
+  "title": "Total number of Recovered Cases across UNDP Regions",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Srihitha-26/FIT3179_hw9/main/Inequality_in_Income.csv"
+  },
+  "mark": "bar",
+  "transform": [
+    {
+      "filter": "isDefined(datum['UNDP Developing Regions'])"
+    },
+    {
+      "filter": "search_input === '' || test(regexp(search_input, 'i'), datum.Country)"
+    }
+  ],
+  "encoding": {
+    "opacity": {
+      "condition": {
+        "test": "test(regexp(search_input,'i'),datum.Country)",
+        "value": 0.9
+      },
+      "value": 0.3
+    },
+    "x": {
+      "field": "UNDP Developing Regions",
+      "type": "nominal",
+      "axis": {"labelAngle": 45, "title": "UNDP Developing Regions", "tickCount": 7}
+    },
+    "y": {
+      "field": "HDI Rank (2021)",
+      "type": "quantitative",
+      "title": "HDI Rank"
+    },
+    "color": {
+      "field": "Human Development Groups",
+      "type": "nominal",
+      "legend": {"title": "Human Development Groups"},
+      "scale": {
+        "domain": ["Low", "Medium", "High", "Very High"],
+        "range": [ "#1f77b4", "#2ca02c", "#d62728", "#9467bd"]
+      }
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal", "title": "Country"},
+      {"field": "HDI Rank (2021)", "type": "quantitative", "title": "HDI Rank"},
+      {"field": "Human Development Groups", "type": "nominal", "title": "Human Development Groups"}
+    ]
+  },
+  "params": [
+    {
+      "name": "search_input",
+      "bind": {
+        "input": "Search",
+        "placeholder": "Country Name",
+        "name": "Search: "
+      },
+      "value": ""
+    }
+  ]
+}
