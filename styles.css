@@ -2,7 +2,7 @@
 	position: relative;
 	/* top:100px; */
 	bottom: 35%; 
-	left: 3%; 
+	left: 4%; 
 	/* right: 100px; */
 	/*height: 500px;
 	width: 800px;*/
@@ -17,7 +17,7 @@
 	position: relative;
 	/* top:100px; */
 	bottom: 35%; 
-	left: 3%;
+	left: 5%;
 	/* right: 100px; */
 	/*height: 600px;
 	width: 600px;*/
@@ -35,18 +35,34 @@
 	padding-right: 6%;
 }
 
+#stackedbar {
+	position: relative;
+	/* top: 25%; */
+	bottom: 35%; 
+	left: 3%;
+	/* right: 100px; */
+	/*height: 600px;
+	width: 600px;*/	
+    margin-bottom: 40px;
+	padding-right: 6%;
+}
+
 
 .large-text {
     font-size: 24px;
 	text-align: center;
 	text-decoration: double;
+	background-color: rgb(229, 185, 204);
 }
 
 .color-text {
+	flex: 1;
 	font-size: 24px;
 	color: chocolate;
 	text-align: center;
-	padding-bottom: 3.5%;
+	padding-bottom: 1%;
+	border-bottom: 1px solid black; 
+	width: 100%; 
 }
 
 .header-text {
@@ -54,7 +70,16 @@
 	text-align: center;
 	font-family: sans-serif;
 	font-weight: bold; 
-    text-decoration: underline; 
+	background-color: antiquewhite;
+}
+
+.vis-container {
+    display: flex;
+    flex-direction: column; /* Display children in a column layout */
+    align-items: center;
+    padding: 20px;
+    font-size: 17px;
+    font-style: oblique;
 }
 
 
@@ -65,17 +90,72 @@
   }
   
   
-.text {
-	width: 50%;
-	padding-left: 2%; 
-	/* padding-right: 20%; */
-	font-size: large;
-	font-family: sans-serif;
-  }
 
   body {
 	background-color: #f0f0f0; /* Replace with the color of your choice */
   }
+
+.title-container {
+	text-align: center; /* Center the title horizontally */
+  }
   
+
+.container {
+	display: flex;
+	text-align: center;
+}
+.chart {
+	flex: 1;
+}
+.text {
+	flex: 1;
+	padding-top: 190px; /* Add padding to the top of the text container */
+}
+.title {
+	font-size: 35px;
+	font-weight: bold;
+	margin-bottom: 26px; /* Add margin to separate title from content */
+}
+.content {
+	font-size: 23px;
+}
+
+.container-left {
+	display: flex;
+	text-align: center;
+  }
+  
+.text-left {
+	flex: 1;
+	padding-top: 160px;
+	padding-right: 3%;
+	padding-left: 3%;
+  }
+  
+.chart-left {
+	flex: 1;
+  }
+  
+.title-left {
+	font-size: 35px;
+	font-weight: bold;
+	margin-bottom: 26px;
+	padding-right: 3%;
+  }
+  
+.content-left {
+	font-size: 23px;
+  }
+  
+  
+
+
+
+
+
+
+
+
+
 
   
