@@ -8,70 +8,105 @@
   
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="styles.css" media="all">
-
   
 </head>
 <body>
 
-  <div>
-    <h1 class="header-text">Welcome to My COVID-19 Dashboard</h1>
-    <p class="large-text">This dashboard provides information about COVID-19 cases around the world.</p>
+
+<div>
+    <h1 style="border:2px solid black;" class="header-text">Covid 19 cases all over the World</h1>
+    <p class="large-text">Covid-19 has significantly impacted our lives. The effects it had on us a few years ago continue to reverberate to this day. Various countries have found themselves in distinct positions, enabling them to support their populations in unique ways. The level of development in these nations plays a pivotal role in determining the extent of support they can provide to their citizens.
+    </p>
     <p class="color-text">Visualization created by: Srihitha Mallepaddi</p>
-  </div>
+</div>
 
-  <div class="chart-container">
-    <div id="hw9">
-      <!-- Chart content goes here -->
-    </div>
-    <div class="text">
-      <p>This first visualization displays a map featuring countries within continents that have the total number of active Covid cases.</p>
-    </div>
-  </div>
 
-  <div class="chart-container">
-    <div id="hw10">
-      <!-- Chart content goes here -->
-    </div>
-    <div class="text">
-      <p>Discover the interactive Scatter plot, providing in-depth COVID-19 insights. As we hover over data points, detailed information about active cases, 
-        total deaths, total cases, and recoveries is revealed. The legend on the right uses colors to identify continents, making it easy to spot countries. 
-        Additionally, point size indicates population count. To enhance the exploration, I've included a filter at the end of the visualization, allowing to focus 
-        on specific continents. 
-      </p>
-    </div>
+<div class="container">
+  <div id=hw9 class="chart">
+      <!-- Your chart content goes here -->
   </div>
+  <div class="text">
+      <div class="title">Geographical Representation of Cases and Gini Index</div>
+      <div class="content">
+        The level of support a country can offer to its citizens during a crisis often depends on its level of development. 
+        The Gini Index serves as a valuable metric for illustrating wealth inequality within a country's population. 
+        Countries with higher Gini coefficients tend to face challenges in delivering effective support during critical times.
+      </div>
+  </div>
+</div>
 
-  <div class="chart-container">
-    <div id="hw10_chart2">
-      <!-- Chart content goes here -->
-    </div>
-    <div class="text">
-      <p> This visualization displays the average total COVID-19 cases by continent.</p>
-      </p>
+<div class="container-left">
+  <div class="text-left">
+    <div class="title-left">Population of various Countries</div>
+    <div class="content-left">The scater plot can be used to see the population, total cases and deaths of various Countries and specific
+      info can be seen using the filter options provided.
     </div>
   </div>
+  <div id=hw10 class="chart-left">
+    <!-- Your chart content goes here. -->
+  </div>
+</div>
+
+
+<div class="container">
+  <div id=stackedbar class="chart">
+      <!-- Your chart content goes here -->
+  </div>
+  <div class="text">
+      <div class="title">Recovered Cases across UNDP regions</div>
+      <div class="content">
+        Different countries fall under different HDI groups regions. A "high HDI group" typically includes countries with HDI values that are 
+        among the highest in the world. These countries tend to have longer life expectancies, higher levels of education, and higher incomes on a
+         per capita basis. <br> <br>
+         This is used to show how different countries were able to face this crisis differently.
+      </div>
+  </div>
+</div>
+
+<div class="container-left">
+  <div class="text-left">
+    <div class="title-left">Total Death Cases across Continents</div>
+    <div class="content-left">
+      This shows the total number of death cases across Continents. This shows how the death cases are like compared to the Countries discussed from the above stacked bar chart
+    </div>
+  </div>
+  <div id=hw10_chart2 class="chart-left">
+    <!-- Your chart content goes here. -->
+  </div>
+</div>
+
+
+
+
 
   <div id="hw9"></div>
   <div id="hw10"></div>
+  <div id="stackedbar"></div>
   <div id="hw10_chart2"></div>
 
   <script type="text/javascript">
 
     // embed the first chart
-    var spec1 = "hw9.vg.json";
+    var spec1 = "map.vg.json";
     vegaEmbed('#hw9', spec1).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
     // Embed the second chart
-    var spec2 = "hw10.vg.json";
+    var spec2 = "scatter_plot.vg.json";
     vegaEmbed('#hw10', spec2).then(function(result) {
       // Access the Vega view instance as result.view
     }).catch(console.error);
 
+     // Embed the third chart
+    var spec3 = "stacked_bar_chart.vg.json";
+    vegaEmbed('#stackedbar', spec3).then(function(result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+
     // Embed the third chart
-    var spec3 = "hw10_chart2.vg.json";
-    vegaEmbed('#hw10_chart2', spec3).then(function(result) {
+    var spec4 = "hw10_chart2.vg.json";
+    vegaEmbed('#hw10_chart2', spec4).then(function(result) {
       // Access the Vega view instance as result.view
     }).catch(console.error);
   </script>
